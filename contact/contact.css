@@ -5,14 +5,19 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #5f5d5d;
+    color: var(--text-color);
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #5f5d5d; /* optionnel, en backup si image ne se charge pas */
+    background-image: url('images/sanatorium-medea-abandonne-historique-a-tskaltubo-georgie-pendant-le-coucher-du-soleil.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 
 /* Header et Navigation */
 header {
@@ -361,20 +366,6 @@ textarea {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Style du corps avec image de fond */
-body {
-    background-image: url('images/sanatorium-medea-abandonne-historique-a-tskaltubo-georgie-pendant-le-coucher-du-soleil.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: var(--text-color);
 }
 
 /* Header et Navigation - Glassmorphism élégant */
