@@ -1,0 +1,430 @@
+/* Contenu interne de la navbar - centré */
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}/* Variables et reset */
+:root {
+    --primary-color: #d4b854;
+    --primary-dark: #b39a46;
+    --dark-color: #1a1a1a;
+    --light-color: #f8f8f8;
+    --text-color: #333;
+    --glass-bg: rgba(26, 26, 26, 0.8);
+    --glass-light: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 15px 35px rgba(0, 0, 0, 0.4);
+    --transition: all 0.3s ease;
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du corps avec image de fond */
+body {
+    background-image: url('/images/sanatorium-medea-abandonne-historique-a-tskaltubo-georgie-pendant-le-coucher-du-soleil.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+/* Header et Navigation - Glassmorphism élégant */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-light);
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    text-shadow: 0 0 10px rgba(212, 184, 84, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+.logo a::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.logo a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px rgba(212, 184, 84, 0.6);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border-radius: var(--radius-sm);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-links li a i {
+    font-size: 16px;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: var(--primary-color);
+    background: var(--glass-light);
+    transform: translateY(-2px);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.nav-links li a:hover::after, .nav-links li a.active::after {
+    width: 70%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: var(--transition);
+    border-radius: 3px;
+}
+/* Section principale avec effet glassmorphism */
+.main-content {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+    z-index: -1;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    background-color: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-dark);
+    border: 1px solid var(--glass-border);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.title {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Bouton de contact avec animation */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-btn:active {
+    transform: translateY(0) scale(1);
+}
+
+/* Footer avec style modernisé */
+.Bottom {
+    margin-top: auto;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    color: white;
+    border-top: 1px solid var(--glass-border);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    transform: translateY(-3px);
+}
+
+.nav-links2 {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-links2 li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-links2 li a::before {
+    content: '→';
+    margin-right: 8px;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links2 li a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.Bottom hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.Copyright {
+    text-align: center;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+/* Animation pour le chargement des éléments */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .content-container {
+        padding: 30px;
+    }
+    
+    .title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+    
+    .navbar-content {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links li a {
+        padding: 6px 12px;
+    }
+    
+    .content-container {
+        padding: 30px 20px;
+    }
+    
+    .title {
+        font-size: 32px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .footer-section {
+        flex: 100%;
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .nav-links2 {
+        align-items: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 28px;
+    }
+    
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
