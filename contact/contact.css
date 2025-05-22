@@ -111,18 +111,6 @@ header {
 .nav-links li a:hover::after, .nav-links li a.active::after {
     width: 70%;
 }
-.nav-links2 li a,
-.nav-links2 li a:link,
-.nav-links2 li a:visited,
-.nav-links2 li a:active,
-.nav-links2 li a:focus {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-}
-
-.nav-links2 li a:hover {
-    color: var(--primary-color);
-}
 
 
 .mobile-menu-btn {
@@ -134,7 +122,7 @@ header {
 .mobile-menu-btn span {
     width: 25px;
     height: 3px;
-    background-color: rgb(92, 88, 88);
+    background-color: white;
     margin: 3px 0;
     transition: var(--transition);
     border-radius: 3px;
@@ -304,21 +292,28 @@ textarea {
 
 .nav-links2 {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    list-style: none;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .nav-links2 li a {
+     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
     font-size: 14px;
-    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
 }
-
+.nav-links2 li a::before {
+    content: '→';
+    margin-right: 8px;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
 .nav-links2 li a:hover {
-    color: #d4b854;
+    color: var(--primary-color);
+    transform: translateX(5px);
 }
 
 /* Responsive */
