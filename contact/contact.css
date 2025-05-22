@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #5f5d5d; /* optionnel, en backup si image ne se charge pas */
-    background-image: url('images/sanatorium-medea-abandonne-historique-a-tskaltubo-georgie-pendant-le-coucher-du-soleil.jpg');
+    background-image: url('../images/sanatorium-medea-abandonne-historique-a-tskaltubo-georgie-pendant-le-coucher-du-soleil.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
