@@ -24,7 +24,7 @@
 
 /* Style du corps avec image de fond */
 body {
-    background-image: url('/images/sanatorium-medea-abandonne-historique-a-tskaltubo-georgie-pendant-le-coucher-du-soleil.jpg');
+    background-image: url('images/sanatorium-medea-abandonne-historique-a-tskaltubo-georgie-pendant-le-coucher-du-soleil.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
