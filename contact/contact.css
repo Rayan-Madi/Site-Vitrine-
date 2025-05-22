@@ -111,6 +111,19 @@ header {
 .nav-links li a:hover::after, .nav-links li a.active::after {
     width: 70%;
 }
+.nav-links2 li a,
+.nav-links2 li a:link,
+.nav-links2 li a:visited,
+.nav-links2 li a:active,
+.nav-links2 li a:focus {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.nav-links2 li a:hover {
+    color: var(--primary-color);
+}
+
 
 .mobile-menu-btn {
     display: none;
