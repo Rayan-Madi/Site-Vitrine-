@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉLÉGANCE - Nos Services</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header avec la navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">ÉLÉGANCE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="service.html"><i class="fas fa-car"></i> Services</a></li>
+                <li><a href="apropos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-container">
+            <h1>Contactez-nous</h1>
+            <p class="contact-intro">Vous avez une question ou une demande ? N'hésitez pas à nous contacter en remplissant le formulaire ci-dessous.</p>
+            
+            <div class="form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="sujet">Sujet</label>
+                        <input type="text" id="sujet" name="sujet" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+            
+            <div id="notification" class="notification">
+                <div class="notification-content">
+                    <h3>Message envoyé !</h3>
+                    <p>Nous avons bien reçu votre message et vous répondrons dans les plus brefs délais.</p>
+                    <button id="close-notification">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="Bottom"> 
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ÉLÉGANCE</h3>
+                <p>Service de location premium pour des expériences inoubliables.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation rapide</h3>
+                <ul class="nav-links2">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@elegance.fr</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Avenue des Champs-Élysées, Paris</p>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright © Madi Rayan 2025. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="contact.js"></script>
+</body>
+</html>
