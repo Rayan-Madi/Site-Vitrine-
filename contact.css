@@ -436,9 +436,9 @@ textarea {
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .navbar {
-        padding: 15px 3%;
+        padding: 15px;
     }
     
     .contact-container {
@@ -469,7 +469,6 @@ textarea {
     
     .navbar-content {
         flex-direction: column;
-        width: 100%;
     }
     
     .logo {
@@ -483,21 +482,12 @@ textarea {
     }
     
     .nav-links li a {
-        padding: 8px 12px;
-        font-size: 12px;
+        padding: 6px 12px;
     }
     
-    .mobile-menu-btn {
-        display: flex;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
     
     .contact-container {
-        padding: 25px 20px;
-        margin: 10px;
+        padding: 30px 20px;
     }
     
     .form-group {
@@ -517,7 +507,6 @@ textarea {
     .footer-section {
         flex: 100%;
         text-align: center;
-        min-width: auto;
     }
     
     .footer-section h3::after {
@@ -534,7 +523,7 @@ textarea {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .navbar {
         padding: 10px;
     }
