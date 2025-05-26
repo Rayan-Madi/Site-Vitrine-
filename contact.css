@@ -1,4 +1,4 @@
-/* Variables et reset */
+/* Variables CSS */
 :root {
     --primary-color: #d4b854;
     --primary-dark: #b39a46;
@@ -16,12 +16,14 @@
     --radius-lg: 15px;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     background-image: url('sanatorium-medea-abandonne-historique-a-tskaltubo-georgie-pendant-le-coucher-du-soleil.jpg');
     background-size: cover;
@@ -35,7 +37,7 @@ body {
     color: var(--text-color);
 }
 
-/* Header et Navigation - Glassmorphism élégant */
+/* Header */
 header {
     position: sticky;
     top: 0;
@@ -53,21 +55,12 @@ header {
     box-shadow: var(--shadow-light);
 }
 
-/* Contenu interne de la navbar - centré */
-.navbar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-}
-
+/* Logo */
 .logo a {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 26px;
+    font-size: clamp(20px, 4vw, 26px);
     letter-spacing: 2px;
     transition: var(--transition);
     text-shadow: 0 0 10px rgba(212, 184, 84, 0.3);
@@ -90,6 +83,7 @@ header {
     text-shadow: 0 0 15px rgba(212, 184, 84, 0.6);
 }
 
+/* Navigation */
 .nav-links {
     display: flex;
     gap: 25px;
@@ -112,11 +106,8 @@ header {
     gap: 6px;
 }
 
-.nav-links li a i {
-    font-size: 16px;
-}
-
-.nav-links li a:hover, .nav-links li a.active {
+.nav-links li a:hover, 
+.nav-links li a.active {
     color: var(--primary-color);
     background: var(--glass-light);
     transform: translateY(-2px);
@@ -134,15 +125,16 @@ header {
     transform: translateX(-50%);
 }
 
-.nav-links li a:hover::after, .nav-links li a.active::after {
+.nav-links li a:hover::after, 
+.nav-links li a.active::after {
     width: 70%;
 }
 
+/* Menu mobile */
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 5px;
 }
 
 .mobile-menu-btn span {
@@ -154,159 +146,81 @@ header {
     border-radius: 3px;
 }
 
-/* Styles pour la page Contact */
-main {
-    padding: 40px 20px;
+/* Contenu principal */
+.main-content {
+    padding: clamp(40px, 8vw, 80px) 20px;
+    text-align: center;
+    position: relative;
     flex: 1;
 }
 
-.contact-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-dark);
-    border: 1px solid var(--glass-border);
-}
-
-h1 {
-    margin-bottom: 20px;
-    color: var(--dark-color);
-    font-size: 32px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.contact-intro {
-    margin-bottom: 30px;
-    color: #555;
-    text-align: center;
-    font-size: 16px;
-}
-
-.form-container {
-    margin-bottom: 30px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    width: calc(50% - 10px);
-    display: inline-block;
-    vertical-align: top;
-}
-
-.form-group:nth-child(even) {
-    margin-left: 20px;
-}
-
-.full-width {
-    width: 100%;
-    margin-left: 0 !important;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: var(--radius-sm);
-    font-size: 15px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    font-family: inherit;
-}
-
-input:focus, textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(212, 184, 84, 0.2);
-}
-
-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.submit-btn {
-    padding: 14px 28px;
-    background-color: var(--primary-color);
-    color: var(--dark-color);
-    border: none;
-    border-radius: var(--radius-sm);
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(212, 184, 84, 0.3);
-}
-
-.submit-btn:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(212, 184, 84, 0.4);
-}
-
-/* Style pour la notification */
-.notification {
-    display: none;
-    position: fixed;
+.main-content::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 999;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(5px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+    z-index: -1;
 }
 
-.notification.active {
-    display: flex;
-}
-
-.notification-content {
-    background-color: #fff;
-    padding: 35px;
-    border-radius: var(--radius-md);
-    text-align: center;
-    max-width: 400px;
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: clamp(30px, 6vw, 50px) clamp(20px, 5vw, 40px);
+    background-color: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-dark);
     border: 1px solid var(--glass-border);
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.notification h3 {
-    margin-bottom: 15px;
-    color: var(--dark-color);
-    font-size: 22px;
+.title {
+    font-size: clamp(28px, 6vw, 42px);
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-#close-notification {
-    margin-top: 20px;
-    padding: 10px 20px;
+.subtitle {
+    font-size: clamp(16px, 3vw, 18px);
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Bouton contact */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 24px);
     background-color: var(--primary-color);
     color: var(--dark-color);
-    border: none;
-    border-radius: var(--radius-sm);
+    text-decoration: none;
+    border-radius: var(--radius-md);
     font-weight: bold;
+    font-size: clamp(14px, 2.5vw, 16px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-#close-notification:hover {
+.contact-btn:hover {
     background-color: var(--primary-dark);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer avec style glassmorphism */
+.contact-btn:active {
+    transform: translateY(0) scale(1);
+}
+
+/* Footer */
 .Bottom {
     margin-top: auto;
     background-color: var(--glass-bg);
@@ -316,19 +230,12 @@ textarea {
 }
 
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px 20px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin-bottom: 30px;
-    padding: 0 15px;
 }
 
 .footer-section h3 {
@@ -353,13 +260,14 @@ textarea {
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 15px;
     font-size: 14px;
-    line-height: 1.8;
 }
 
+/* Réseaux sociaux */
 .social-icons {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -381,6 +289,7 @@ textarea {
     transform: translateY(-3px);
 }
 
+/* Navigation footer */
 .nav-links2 {
     list-style: none;
     display: flex;
@@ -409,6 +318,7 @@ textarea {
     transform: translateX(5px);
 }
 
+/* Copyright */
 .Bottom hr {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -423,7 +333,7 @@ textarea {
     font-size: 14px;
 }
 
-/* Animation pour le chargement des éléments */
+/* Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -435,44 +345,12 @@ textarea {
     }
 }
 
-/* Responsive Design */
+/* Media Queries Responsive */
 @media (max-width: 768px) {
     .navbar {
-        padding: 15px;
-    }
-    
-    .contact-container {
-        padding: 30px;
-        margin: 20px;
-    }
-    
-    h1 {
-        font-size: 28px;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
-    
-    .nav-links li a {
-        padding: 6px 12px;
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 15px;
         flex-direction: column;
         gap: 15px;
-    }
-    
-    .navbar-content {
-        flex-direction: column;
-    }
-    
-    .logo {
-        margin-bottom: 15px;
+        padding: 15px;
     }
     
     .nav-links {
@@ -483,30 +361,17 @@ textarea {
     
     .nav-links li a {
         padding: 6px 12px;
+        font-size: 12px;
     }
     
-    
-    .contact-container {
-        padding: 30px 20px;
-    }
-    
-    .form-group {
-        width: 100%;
-        margin-left: 0 !important;
-    }
-    
-    h1 {
-        font-size: 24px;
+    body {
+        background-attachment: scroll;
     }
     
     .footer-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
-    }
-    
-    .footer-section {
-        flex: 100%;
-        text-align: center;
+        gap: 20px;
     }
     
     .footer-section h3::after {
@@ -514,65 +379,14 @@ textarea {
         transform: translateX(-50%);
     }
     
-    .nav-links2 {
-        align-items: center;
-    }
-    
     .social-icons {
         justify-content: center;
     }
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-    }
-    
-    .logo a {
-        font-size: 22px;
-    }
-    
-    .nav-links li a {
-        padding: 6px 10px;
-        font-size: 11px;
-    }
-    
-    .contact-container {
-        padding: 20px 15px;
-        margin: 5px;
-    }
-    
-    h1 {
-        font-size: 22px;
-    }
-    
-    .contact-intro {
-        font-size: 14px;
-    }
-    
-    input, textarea {
-        padding: 10px;
-        font-size: 14px;
-    }
-    
-    .submit-btn {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-    
-    .notification-content {
-        padding: 25px;
-        margin: 20px;
-    }
-}
-
 @media (max-width: 480px) {
     .navbar {
-        padding: 8px;
-    }
-    
-    .logo a {
-        font-size: 20px;
+        padding: 10px;
     }
     
     .nav-links {
@@ -580,15 +394,15 @@ textarea {
     }
     
     .nav-links li a {
-        padding: 4px 8px;
-        font-size: 10px;
+        padding: 5px 8px;
+        font-size: 11px;
     }
     
-    .contact-container {
-        padding: 15px 10px;
+    .main-content {
+        padding: 30px 15px;
     }
     
-    h1 {
-        font-size: 20px;
+    .content-container {
+        padding: 25px 15px;
     }
 }
