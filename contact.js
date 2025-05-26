@@ -190,18 +190,4 @@ Merci de nous avoir contactés !`;
     console.log('Script contact.js entièrement initialisé avec validation améliorée');
 });
 
-// Fonction utilitaire pour afficher des messages personnalisés
-function showCustomAlert(title, message, type = 'success') {
-    const icons = {
-        success: '✅',
-        warning: '⚠️',
-        error: '❌',
-        info: 'ℹ️'
-    };
-    
-    const icon = icons[type] || icons.info;
-    alert(`${icon} ${title}\n\n${message}`);
-}
 
-// Test simple pour vérifier que le script se charge
-console.log('Fichier contact.js chargé - Version améliorée avec alerte de confirmation');
