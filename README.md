@@ -25,5 +25,5 @@ L’objectif de ce projet était de :
 
 ## 📷 Aperçu
 
-![Aperçu du site](https://via.placeholder.com/800x400?text=Capture+d%E2%80%99%C3%A9cran+du+site)  
+![Aperçu du site]([https://via.placeholder.com/800x400?text=Capture+d%E2%80%99%C3%A9cran+du+site](https://rayan-madi.github.io/Site-Vitrine-/index.html))  
 
