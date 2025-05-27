@@ -24,6 +24,5 @@ L’objectif de ce projet était de :
 - Appliquer les bases du responsive design sans framework
 
 ## 📷 Aperçu
-
-![Aperçu du site] https://rayan-madi.github.io/Site-Vitrine-/
+ https://rayan-madi.github.io/Site-Vitrine-/
 
